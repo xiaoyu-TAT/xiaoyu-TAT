@@ -91,48 +91,7 @@ Platforms & Tools
 	•	Blog: https://www.cnblogs.com/Yu-OvO
 	•	GitHub: https://github.com/xiaoyu-TAT
 
-⸻
 
-🐍 动态贡献蛇动画
-
-在 .github/workflows/snake.yml 中添加以下内容：
-
-name: Generate Snake
-
-on:
-  schedule:
-    - cron: "0 16 * * *"  # 每天 UTC 16:00 运行（北京时间 +8 为次日 00:00）
-  workflow_dispatch:
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Generate snake.svg
-        uses: Platane/snk@v3
-        with:
-          github_user_name: xiaoyu-TAT
-          outputs: dist/snake.svg
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: snake
-          path: dist/snake.svg
-
-      - name: Commit to repo
-        run: |
-          mkdir -p dist
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add dist/snake.svg || true
-          git commit -m "chore: update snake" || true
-          git push || true
-
-然后在 README 中任意位置插入以下代码来展示动画：
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/xiaoyu-TAT/xiaoyu-TAT/main/dist/snake.svg" alt="snake" />
