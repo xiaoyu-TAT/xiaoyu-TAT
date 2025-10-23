@@ -87,7 +87,7 @@ Platforms & Tools
 ⸻
 
 📬 Contact
-	•	Email: yu@example.com
+	•	Email: JustOneYu@outlook.com
 	•	Blog: https://www.cnblogs.com/Yu-OvO
 	•	GitHub: https://github.com/xiaoyu-TAT
 
