@@ -30,9 +30,8 @@ Languages
 
 <p>
   <img alt="C" src="https://img.shields.io/badge/C-A8B9CC?logo=c&logoColor=white" />
-  <img alt="C++" src="https://img.shields.io/badge/C%2B%2B-00599C?logo=c%2B%2B&logoColor=white" />
+  <img alt="Java" src="https://img.shields.io/badge/Java-007396?logo=java&logoColor=white" />
   <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" />
-  <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black" />
 </p>
 
 
@@ -88,8 +87,57 @@ Platforms & Tools
 ⸻
 
 📬 Contact
+	•	Email: yu@example.com
 	•	Blog: https://www.cnblogs.com/Yu-OvO
 	•	GitHub: https://github.com/xiaoyu-TAT
+
+⸻
+
+🐍 动态贡献蛇动画
+
+在 .github/workflows/snake.yml 中添加以下内容：
+
+name: Generate Snake
+
+on:
+  schedule:
+    - cron: "0 16 * * *"  # 每天 UTC 16:00 运行（北京时间 +8 为次日 00:00）
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate snake.svg
+        uses: Platane/snk@v3
+        with:
+          github_user_name: xiaoyu-TAT
+          outputs: dist/snake.svg
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: snake
+          path: dist/snake.svg
+
+      - name: Commit to repo
+        run: |
+          mkdir -p dist
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dist/snake.svg || true
+          git commit -m "chore: update snake" || true
+          git push || true
+
+然后在 README 中任意位置插入以下代码来展示动画：
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/xiaoyu-TAT/xiaoyu-TAT/main/dist/snake.svg" alt="snake" />
+</p>
+
 
 ⸻
 
