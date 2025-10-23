@@ -20,7 +20,6 @@
 	•	🎯 方向：系统 / 虚拟化 / 安全 / Web ✨
 	•	🧰 目前常用：macOS (Apple Silicon) · VS Code · Docker · QEMU · LLVM/Clang · GCC
 	•	📚 正在折腾：MIT 6.828 · JOS · CTF 靶场（DVWA）
-	•	📝 博客：Yu_OvO 的博客园
 
 ⸻
 
@@ -79,10 +78,10 @@ Platforms & Tools
 
 ⸻
 
-🧠 Fun Facts
-	•	⌨️ 热爱写“一步到位”的脚本与配置
-	•	🛠️ 喜欢打造优雅的环境与自动化流程
-	•	🌈 坚持代码整洁与风格统一
+🎮� About games
+	•	🙏守望先锋老年玩家，不要花男谢谢🙏
+	•	⚡️CSGO电击自由人，计数器目前三千多⚡️
+	•	🙌星露谷糕首🙌
 
 ⸻
 
