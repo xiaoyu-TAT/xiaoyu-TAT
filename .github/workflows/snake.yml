@@ -5,12 +5,17 @@ on:
     - cron: "0 16 * * *"  # 每天 UTC 16:00 运行（北京时间 +8 为次日 00:00）
   workflow_dispatch:
 
+permissions:
+  contents: write  # ✅ 允许工作流提交文件到仓库
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - name: Generate snake.svg
         uses: Platane/snk@v3
@@ -18,17 +23,13 @@ jobs:
           github_user_name: xiaoyu-TAT
           outputs: dist/snake.svg
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: snake
-          path: dist/snake.svg
-
-      - name: Commit to repo
+      - name: Push generated snake.svg to main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           mkdir -p dist
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add dist/snake.svg || true
-          git commit -m "chore: update snake" || true
-          git push || true
+          git commit -m "chore: update snake 🐍" || true
+          git push origin main || true
