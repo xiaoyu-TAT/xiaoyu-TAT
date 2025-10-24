@@ -61,18 +61,6 @@ Platforms & Tools
 
 
 
-⸻
-
-📌 Featured Projects
-
-<p align="center">
-  <a href="https://github.com/xiaoyu-TAT/MIT6.828-Lab">
-    <img width="45%" src="https://github-readme-stats.vercel.app/api/pin/?username=xiaoyu-TAT&repo=MIT6.828-Lab&hide_border=true" />
-  </a>
-  <a href="https://github.com/xiaoyu-TAT/DVWA-on-Mac">
-    <img width="45%" src="https://github-readme-stats.vercel.app/api/pin/?username=xiaoyu-TAT&repo=DVWA-on-Mac&hide_border=true" />
-  </a>
-</p>
 
 
 
