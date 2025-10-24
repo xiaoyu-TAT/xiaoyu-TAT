@@ -52,9 +52,6 @@ Platforms & Tools
 
 <div align="center">
 <a href="https://github.com/xiaoyu-TAT">
-  <img height="160" src="https://github-readme-stats.vercel.app/api?username=xiaoyu-TAT&show_icons=true&rank_icon=github&include_all_commits=true&hide_title=true&hide_border=true" alt="stats" />
-</a>
-<a href="https://github.com/xiaoyu-TAT">
   <img height="160" src="https://github-readme-streak-stats.herokuapp.com/?user=xiaoyu-TAT&hide_border=true" alt="streak" />
 </a>
 </div>
